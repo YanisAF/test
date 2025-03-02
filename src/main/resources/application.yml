@@ -1,0 +1,16 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/product_db
+    username: your_username
+    password: your_password
+
+  sql.init:
+    schema-locations: classpath:schema.sql
+    mode: always
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
